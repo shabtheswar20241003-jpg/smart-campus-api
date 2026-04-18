@@ -13,7 +13,7 @@ public class Main {
 
     public static HttpServer startServer() {
         // This tells Jersey to scan your com.smartcampus.api package for endpoints
-        final ResourceConfig rc = new ResourceConfig().packages("com.smartcampus.api");
+        final ResourceConfig rc = new ResourceConfig().packages("com.smartcampus");
 
         // Create and start a new instance of grizzly http server
         return GrizzlyHttpServerFactory.createHttpServer(URI.create(BASE_URI), rc);
