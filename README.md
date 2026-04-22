@@ -78,7 +78,7 @@ curl -X POST http://localhost:8080/api/v1/sensors/<SENSOR_ID>/readings \
 
 By default, JAX-RS utilizes a per-request lifecycle, meaning a brand new instance of the Resource class is instantiated for every single incoming HTTP request, and then destroyed immediately after the response is sent. If we used standard instance variables to hold our data, the data would be wiped out the moment the request finished. To prevent this data loss, our implementation utilizes the Singleton design pattern for a central DataStore class. By holding our Maps inside a Singleton, all transient JAX-RS resource instances access the exact same persistent object in memory.
 
-## Question: Why is the provision of "Hypermedia" (links and navigation within responses) considered a hallmark of advanced RESTful design (HATEOAS)? How does this approach benefit client developers compared to static documentation?
+### Question: Why is the provision of "Hypermedia" (links and navigation within responses) considered a hallmark of advanced RESTful design (HATEOAS)? How does this approach benefit client developers compared to static documentation?
 Hypermedia as the Engine of Application State (HATEOAS) makes an API discoverable and self-documenting. Instead of forcing client developers to hardcode specific URL paths based on static documentation, the API response itself provides the navigational links (URLs) required to interact with related resources. This decouples the client from the server's routing structure. If the backend architecture changes and URIs are updated, the client will not break because it dynamically follows the URLs provided in the server's JSON response.
 
 ## Part 2: Room Management
