@@ -24,6 +24,7 @@ Build the project: Let Maven download the necessary JAX-RS and Grizzly server de
 
 Bash
 mvn clean install
+
 Start the Server: Locate the com.smartcampus.Main class in your src/main/java directory. Run the main() method from your IDE.
 
 Verify: The console will output: Jersey app started with endpoints available at http://localhost:8080/api/v1/
@@ -35,12 +36,16 @@ Ensure the server is running. You can test the API by running these commands in 
 
 Bash
 curl -X GET http://localhost:8080/api/v1/
+
+
 2. Create a New Room:
 
 Bash
 curl -X POST http://localhost:8080/api/v1/rooms \
 -H "Content-Type: application/json" \
 -d '{"name": "Main Library", "capacity": 150}'
+
+
 3. Retrieve All Rooms:
 
 Bash
@@ -57,6 +62,8 @@ Bash
 curl -X POST http://localhost:8080/api/v1/sensors/<SENSOR_ID>/readings \
 -H "Content-Type: application/json" \
 -d '{"value": 22.5}'
+
+
 4. Conceptual Report
 Part 1: Service Architecture & Setup
 Question: Explain the default lifecycle of a JAX-RS Resource class. Is a new instance instantiated for every incoming request, or does the runtime treat it as a singleton? Elaborate on how this architectural decision impacts the way you manage and synchronize your in-memory data structures (maps/lists) to prevent data loss or race conditions.
