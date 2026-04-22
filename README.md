@@ -33,7 +33,7 @@ mvn clean install
 4. Verify: The console will output: Jersey app started with endpoints available at http://localhost:8080/api/v1/
 
 
-##3. Sample API Interactions (cURL Commands)
+## 3. Sample API Interactions (cURL Commands)
 Ensure the server is running. You can test the API by running these commands in your terminal. Note: For commands 4 and 5, you will need to replace <ROOM_ID> and <SENSOR_ID> with the actual IDs generated from the previous steps.
 
 1. View API Discovery Metadata:
